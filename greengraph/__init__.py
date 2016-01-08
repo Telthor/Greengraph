@@ -1,2 +1,2 @@
 from greengraph.py import greengraph
-from map.py import map
+from Map.py import Map
