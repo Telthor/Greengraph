@@ -5,10 +5,10 @@ from matplotlib import pyplot as plt
 def process():
     parser = ArgumentParser(description = 'Calculate amount of greenspace between two points')
 
-    parser.add_argument('--beginning','-b')
-    parser.add_argument('--to','-t')
-    parser.add_argument('--steps','-s')
-    parser.add_argument('--out','-o')
+    parser.add_argument('--beginning','-b', help = 'Starting point for greengraph')
+    parser.add_argument('--to','-t', help = 'End point for green graph')
+    parser.add_argument('--steps','-s', help = 'number of measurement steps between start and end')
+    parser.add_argument('--out','-o', help = 'file that figure is saved as')
 
     arguments = parser.parse_args()
 
