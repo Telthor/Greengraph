@@ -3,6 +3,7 @@ import numpy as np
 import geopy
 from StringIO import StringIO
 from matplotlib import image as img
+from matplotlib import pyplot as plt
 import requests
 from Map import Map
 
@@ -26,3 +27,12 @@ class Greengraph(object):
                     self.geolocate(self.start),
                     self.geolocate(self.end),
                     steps)]
+
+def grapher(beginning, end, steps = 10, out = False):
+    data = Greengraph(beginning, end)
+    graph = data.green_between(steps)
+    plt.plot(graph)
+    if out == False:
+        plt.show()
+    else:
+        plt.savefig(out)
