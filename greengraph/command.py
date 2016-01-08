@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from greengraph import Greengraph
+from greengraph import Greengraph, grapher
 from matplotlib import pyplot as plt
 
 def process():
@@ -7,15 +7,18 @@ def process():
 
     parser.add_argument('--beginning','-b', help = 'Starting point for greengraph')
     parser.add_argument('--to','-t', help = 'End point for green graph')
-    parser.add_argument('--steps','-s', help = 'number of measurement steps between start and end')
-    parser.add_argument('--out','-o', help = 'file that figure is saved as')
+    parser.add_argument('--steps','-s', default = 10, help = 'number of measurement steps between start and end')
+    parser.add_argument('--out','-o', default = False, help = 'file that figure is saved as')
 
     arguments = parser.parse_args()
-
-    my_graph = Greengraph(arguments.beginning, arguments.to)
-    plt.plot(my_graph.green_between(arguments.steps))
-    plt.show()
-
+    grapher(arguments.beginning, arguments.to, arguments.steps, arguments.out)
+#    my_graph = Greengraph(arguments.beginning, arguments.to)k
+#    plot_1 = plt.plot(my_graph.green_between(arguments.steps))
+#    if --out = False:
+#        plt.show()
+#    else:
+#        plt.savefig
+    
 if __name__ == '__main__':
     process()
     
