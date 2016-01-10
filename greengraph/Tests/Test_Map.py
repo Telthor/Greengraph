@@ -67,4 +67,9 @@ def test_count_green(mock_img, mock_get):
     ex_map.pixels = green_four
     assert(ex_map.count_green() == 4)
 
-
+def test_show_green():
+    green_map = ex_map.show_green()
+    print ex_map.pixels
+    green_map_array = img.imread(StringIO(green_map))[0,0,0:3]
+    print green_map_array
+    assert numpy.all(ex_map.pixels==green_map_array)
