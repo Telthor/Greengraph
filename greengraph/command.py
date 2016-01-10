@@ -12,12 +12,7 @@ def process():
 
     arguments = parser.parse_args()
     grapher(arguments.beginning, arguments.to, arguments.steps, arguments.out)
-#    my_graph = Greengraph(arguments.beginning, arguments.to)k
-#    plot_1 = plt.plot(my_graph.green_between(arguments.steps))
-#    if --out = False:
-#        plt.show()
-#    else:
-#        plt.savefig
+
     
 if __name__ == '__main__':
     process()
