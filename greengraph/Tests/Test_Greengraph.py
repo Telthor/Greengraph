@@ -33,7 +33,6 @@ def test_const(mock_get):
     mock_get.assert_called_with(domain="maps.google.co.uk")
 
 def test_geolocate():
-    # This does connect to the internet, but this seems reasonable to me for this particular test
     for key in locations:
         location_data = [[0,tuple(locations[key])]]
         print location_data
