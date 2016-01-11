@@ -5,7 +5,7 @@ from StringIO import StringIO
 from matplotlib import image as img
 from matplotlib import pyplot as plt
 import requests
-from Map import Map
+from map import Map
 
 class Greengraph(object):
     def __init__(self, start, end):

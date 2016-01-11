@@ -1,6 +1,6 @@
 from nose.tools import assert_raises, assert_almost_equal, assert_equal
 from ..greengraph import Greengraph
-from ..Map import Map
+from ..map import Map
 from mock import patch, Mock
 import geopy
 import yaml
