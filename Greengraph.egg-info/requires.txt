@@ -1,5 +1,0 @@
-argparse
-matplotlib
-geopy
-numpy
-requests
